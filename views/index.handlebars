@@ -1,8 +1,75 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Compass</title>
+	<meta charset="utf-8">
+	
+	{{!-- Add script --}}
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-1.11.0.js"></script>
+	{{!-- <script src="js/hci-friends.js"></script> --}}
+
+	{{!-- Add link --}}
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+	{{!-- put icons in a row --}}
+	<div class="center">
+		<div id="rectangle"></div>
+
+		{{!-- menu icon --}}
+		<div class="block" id="menu-icon">
+			<a href="#"><i class="fa fa-bars" style="font-size: 20px; color: white;"></i></a> 
+		</div>
+
+		{{!-- search bar --}}
+		<div class="block" id="search-bar">
+			<input type="text" placeholder="Search...">
+			<a href="#"><i class="fa fa-fw fa-search" style="font-size: 20px; color: white;"></i></a> 
+		</div>
+		
+		{{!-- filter icon --}}
+		<div class="block", id="filter-icon">
+			<a href="#"><i class="fa fa-sliders" aria-hidden="true" style="font-size: 20px; color: white;"></i></a>
+		</div>
+		
+		{{!-- manage icon --}}
+		<div class="block" id="manage-icon">
+			<a href="#"><i class="fa fa-edit" style="font-size: 20px; color: white;"></i></a> 
+		</div>
+		
+	</div>
+	
+	{{!-- diary --}}
+	<div class="container">
+		<div class="diary-page">
+			{{#each diaries}}
+				<button class="diary">
+					<div id="date">
+						<h4>{{date}}</h4>
+					</div>
+					<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
+					{{!-- <p>{{description}}</p> --}}
+				</button>
+				<hr>
+			{{/each}}
+		</div>
+		
+	</div>
+
+	{{!-- lower menu --}}
+	<div class="lower-menu">
+		<i class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: black;"></i> 
+		<i class="fa fa-plus-circle block" aria-hidden="true" style="font-size: 61.2px; color: black;"></i>
+		<i class="fa fa-user-circle button block" aria-hidden="true" style="font-size: 51.6px; color: black;"></i>
+		
+	</div>
+
+
+
 </body>
 </html>
