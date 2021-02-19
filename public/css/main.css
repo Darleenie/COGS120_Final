@@ -81,6 +81,7 @@ h1, h2, h3, h5 {
 } 
 
 .lower-icon {
+	position: sticky;
 	bottom: 10;
 	text-align: center;
 }
@@ -101,13 +102,18 @@ h1, h2, h3, h5 {
 	z-index: 2;
 }
 
+#menu-icon {
+	top: 10px;
+	left:15px; 
+}
+
 #rectangle{
     width: 500px;
     height: 60px;
     background:white;
 	position: fixed;
-	/* text-align: center; */
-	z-index: 1;
+	text-align: center;
+	z-index: 2;
 }
 
 .button {
@@ -125,6 +131,7 @@ h1, h2, h3, h5 {
 	cursor: pointer;
 	height: 70px;
 	width: 200px;
+	border-radius: 10px; 
 }
 
 .button:active{

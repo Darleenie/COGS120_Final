@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var create = require('./routes/create');
+var account = require('./routes/account');
+var world = require('./routes/world');
 var webcam = require('./routes/webcam');
 var voice = require('./routes/voice');
 // Example route
@@ -39,8 +41,12 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/create', create.view);
+app.get('/account', account.view);
+app.get('/world', world.view);
 app.get('/webcam', webcam.view);
-app.get('/voice', voice.view)
+app.get('/voice', voice.view);
+
+
 // Example route
 // app.get('/users', user.list);
 

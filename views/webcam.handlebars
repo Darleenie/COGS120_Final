@@ -20,18 +20,25 @@
 
     <body>
         {{!-- video --}}
-        <video autoplay="true" id="videoElement"></video>
-        <script>
-            var video = document.querySelector("#videoElement");
-            if (navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function (stream) {
-                video.srcObject = stream;
-                })
-                .catch(function (err0r) {
-                console.log("Something went wrong!");
-                });
-            }
-        </script>
+        <div>
+            <video autoplay="true" id="videoElement"></video>
+            <script>
+                var video = document.querySelector("#videoElement");
+                if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                    video.srcObject = stream;
+                    })
+                    .catch(function (err0r) {
+                    console.log("Something went wrong!");
+                    });
+                }
+            </script>
+        </div>
+
+        {{!-- start button --}}
+        <div class="lower-icon">
+            <button class="round-button" style="bottom: 20px; margin-top:156%"></button>
+        </div>
     </body>
 </html>

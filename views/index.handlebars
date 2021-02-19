@@ -50,7 +50,7 @@
 			{{#each diaries}}
 				<button class="diary">
 					<div id="date">
-						<h4>{{date}}</h4>
+						<h4 style="text-shadow: 4px 4px 5px #797979;">{{date}}</h4>
 					</div>
 					<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
 					{{!-- <p>{{description}}</p> --}}
@@ -62,11 +62,11 @@
 	</div>
 
 	{{!-- lower menu --}}
-	<div id="rectangle" style="bottom: 0; height: 100px;"></div>
+	<div id="rectangle" style="bottom: 0; height: 100px; opacity: 0.6"></div>
 	<div class="lower-menu">
-		<i id="world" class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: black;"></i> 
+		<a href="world"><i id="world" class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: black;"></i></a>
 		<a href="create"><i id="add" class="fa fa-plus-circle block" aria-hidden="true" style="font-size: 61.2px; color: black;"></i></a>
-		<i id="account" class="fa fa-user-circle block" aria-hidden="true" style="font-size: 51.6px; color: black;"></i>
+		<a href="account"><i id="account" class="fa fa-user-circle block" aria-hidden="true" style="font-size: 51.6px; color: black;"></i></a>
 	</div>
 
 
