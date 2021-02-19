@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Compass Create Diary</title>
+        <meta charset="utf-8">
+        
+        {{!-- Add script --}}
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/eventHandler.js"></script>
+
+        {{!-- Add link --}}
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        
+        {{!-- menu icon --}}
+		<div class="block" id="menu-icon">
+			<a href="#"><i class="fa fa-bars" style="font-size: 20px; color: black;"></i></a> 
+		</div>
+
+        {{!-- time display --}}
+        <p id="demo" class="time"></p>
+
+        <script>
+            //var d = new Date();
+            //document.getElementById("demo").innerHTML = d.toUTCString();
+
+
+            document.getElementById("demo").innerHTML = formatAMPM();
+
+            function formatAMPM() {
+            var d = new Date(),
+            minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+            hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+            ampm = d.getHours() >= 12 ? 'pm' : 'am',
+            months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            days = ['Sunday','Monday','Tuesday','Wednesday','Thusday','Friday','Saturday'];
+            return days[d.getDay()]+'<br>'+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+'<br>'+hours+':'+minutes+ampm;
+            }
+        </script>
+
+
+        <div style="text-align:center">
+            {{!-- camera --}}
+            <a href="webcam"><button class="fa fa-camera fa-3x camera button" aria-hidden="true"></button></a>
+        
+            {{!-- voice --}}
+            <a href="voice"><button class="fa fa-microphone fa-3x voice button" aria-hidden="true"></button></a>
+        </div>
+        
+        
+        {{!-- close icon--}}
+        <div class="lower-icon" style="bottom: 20px;">
+            <a href="/"><i id="closetab" class="fa fa-times-circle" aria-hidden="true" style="font-size: 61.2px; color: black;"></i></aria-hidden>
+        </div>
+
+    </body>
+</html>

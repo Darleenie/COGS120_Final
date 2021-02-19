@@ -18,28 +18,28 @@
 </head>
 <body>
 	{{!-- put icons in a row --}}
-	<div class="center">
+	<div class="top-menu">
 		<div id="rectangle"></div>
 
 		{{!-- menu icon --}}
 		<div class="block" id="menu-icon">
-			<a href="#"><i class="fa fa-bars" style="font-size: 20px; color: white;"></i></a> 
+			<a href="#"><i class="fa fa-bars" style="font-size: 20px; color: black;"></i></a> 
 		</div>
 
 		{{!-- search bar --}}
 		<div class="block" id="search-bar">
 			<input type="text" placeholder="Search...">
-			<a href="#"><i class="fa fa-fw fa-search" style="font-size: 20px; color: white;"></i></a> 
+			<a href="#"><i class="fa fa-fw fa-search" style="font-size: 20px; color: black;"></i></a> 
 		</div>
 		
 		{{!-- filter icon --}}
 		<div class="block", id="filter-icon">
-			<a href="#"><i class="fa fa-sliders" aria-hidden="true" style="font-size: 20px; color: white;"></i></a>
+			<a href="#"><i class="fa fa-sliders" aria-hidden="true" style="font-size: 20px; color: black;"></i></a>
 		</div>
 		
 		{{!-- manage icon --}}
 		<div class="block" id="manage-icon">
-			<a href="#"><i class="fa fa-edit" style="font-size: 20px; color: white;"></i></a> 
+			<a href="#"><i class="fa fa-edit" style="font-size: 20px; color: black;"></i></a> 
 		</div>
 		
 	</div>
@@ -62,11 +62,11 @@
 	</div>
 
 	{{!-- lower menu --}}
+	<div id="rectangle" style="bottom: 0; height: 100px;"></div>
 	<div class="lower-menu">
-		<i class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: black;"></i> 
-		<i class="fa fa-plus-circle block" aria-hidden="true" style="font-size: 61.2px; color: black;"></i>
-		<i class="fa fa-user-circle button block" aria-hidden="true" style="font-size: 51.6px; color: black;"></i>
-		
+		<i id="world" class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: black;"></i> 
+		<a href="create"><i id="add" class="fa fa-plus-circle block" aria-hidden="true" style="font-size: 61.2px; color: black;"></i></a>
+		<i id="account" class="fa fa-user-circle block" aria-hidden="true" style="font-size: 51.6px; color: black;"></i>
 	</div>
 
 

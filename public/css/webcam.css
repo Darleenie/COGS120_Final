@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+}
+#videoElement {
+	width: 352px;
+	height: 519px;
+	object-fit: cover;
+	background-image: url('../images/camera-bg.jpg');
+	position: absolute;
+	left: 3.2%;
+	right: 2.93%;
+	top: 5.7%;
+	bottom: 16.49%;
+}

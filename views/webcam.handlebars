@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Compass Create Diary</title>
+        <meta charset="utf-8">
+        
+        {{!-- Add script --}}
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/eventHandler.js"></script>
+
+        {{!-- Add link --}}
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/webcam.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        {{!-- video --}}
+        <video autoplay="true" id="videoElement"></video>
+        <script>
+            var video = document.querySelector("#videoElement");
+            if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                video.srcObject = stream;
+                })
+                .catch(function (err0r) {
+                console.log("Something went wrong!");
+                });
+            }
+        </script>
+    </body>
+</html>
