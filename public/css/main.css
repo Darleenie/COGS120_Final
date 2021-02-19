@@ -92,13 +92,16 @@ h1, h2, h3, h5 {
     justify-content: center;
 	/* position: fixed; */
 	position: sticky;
+	top: 0;
+	margin-top: 10px;
 	text-align: center;
-	top: 10px;
+	/* top: 10px; */
 	z-index: 2;
 }
 
 .block {
     margin: 0 15px; 
+	margin-top: 20px;
 	z-index: 2;
 }
 

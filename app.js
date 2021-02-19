@@ -12,8 +12,11 @@ var index = require('./routes/index');
 var create = require('./routes/create');
 var account = require('./routes/account');
 var world = require('./routes/world');
+var filter = require('./routes/filter');
+var manage = require('./routes/manage');
 var webcam = require('./routes/webcam');
 var voice = require('./routes/voice');
+var content = require('./routes/content');
 // Example route
 // var user = require('./routes/user');
 
@@ -43,8 +46,11 @@ app.get('/', index.view);
 app.get('/create', create.view);
 app.get('/account', account.view);
 app.get('/world', world.view);
+app.get('/filter', filter.view);
+app.get('/manage', manage.view);
 app.get('/webcam', webcam.view);
 app.get('/voice', voice.view);
+app.get('/content/:id', content.viewPrev);
 
 
 // Example route
