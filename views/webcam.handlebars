@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Compass Create Diary</title>
+        <title>Compass Webcam</title>
         <meta charset="utf-8">
         
         {{!-- Add script --}}
@@ -37,8 +37,10 @@
         </div>
 
         {{!-- start button --}}
-        <div class="lower-icon">
-            <button class="round-button" style="bottom: 20px; margin-top:156%"></button>
+        <div class="lower-icon webcam-lower-bar">
+            <a href="/create"><i class="fa fa-chevron-left fa-3x block" style="color:white; margin-right:20%"></i></a>
+            <a><button id="record" class="round-button block"></button></a>
+            <a href="/index"><i id="check" class="fa fa-check fa-3x block" style="color:white; margin-left:16%; opacity:0"></i></a>
         </div>
     </body>
 </html>

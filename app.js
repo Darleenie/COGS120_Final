@@ -8,6 +8,8 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+var login = require('./routes/login');
+var signup = require('./routes/signup');
 var index = require('./routes/index');
 var create = require('./routes/create');
 var account = require('./routes/account');
@@ -42,7 +44,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/signup', signup.view)
+app.get('/index', index.view);
 app.get('/create', create.view);
 app.get('/account', account.view);
 app.get('/world', world.view);

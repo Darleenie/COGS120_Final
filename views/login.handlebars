@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Compass voice recording</title>
+    <meta charset="utf-8">
+
+    {{!-- Add script --}}
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/eventHandler.js"></script>
+
+    {{!-- Add link --}}
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <form action="/index" method="get" id="ajaxForm"> 
+
+        {{!-- logo --}}
+        <div class="imgcontainer">
+            <img src="/images/LOGO_login.png" alt="logo">
+        </div>
+
+        <div class="container">
+            {{!-- Username --}}
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            {{!-- Password --}}
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <div><br></div>
+
+            {{!-- Login --}}
+            <button type="submit"><h2 style="font-size: 20px; color: white; line-height: 0; margin-bottom: 16px;">LOGIN</h2></button>
+            <label class="horizontal-container">
+                <span class="psw block"><input type="checkbox" checked="checked" name="remember"> Remember me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+                <span class="psw block">Forgot <a href="#">password?</a></span>
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <p class="signup" style="margin-left:28%"><a href='signup'> New user? Sign up here</a></p>
+        </div>
+
+        {{!-- <div>
+            <a href='signup'>New user? Sign up here</a>
+        </div> --}}
+        
+    </form>
+
+
+
+
+    </body>
+</html>
+
