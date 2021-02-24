@@ -16,7 +16,7 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color: #995762;
+    background-color: #8E7B4B;
     color: white;
     padding: 5px 14px;
     margin: 0px 0;
@@ -63,36 +63,6 @@ form {
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* Change styles for span and cancel button on extra small screens */
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
     span.psw {

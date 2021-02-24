@@ -13,12 +13,12 @@ function initializePage() {
 
 	// $('#colorBtn').click(randomizeColors);
 	var count = 0;
-	$("#record").click(checkClick);
+	$("button img").click(checkClick);
 }
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("mySidenav").style.width = "200px";
 }
 
 /* Set the width of the side navigation to 0 */
@@ -26,17 +26,44 @@ function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 }
 
+/* open filter */
+function openFilter() {
+	document.getElementById("myFilter").style.width = "400px";
+	document.getElementById("myFilter").style.height = "150x";
+}
+
+/* close filter */
+function closeFilter() {
+	document.getElementById("myFilter").style.width = "0px";
+}
+
 /* check for webcam */ 
 function checkClick(){
-	// console.log("clicked!");
-	// console.log("now is " + document.querySelector("#record").style.borderRadius);
-	document.getElementById("record").style.borderRadius = 0;
-	document.getElementById("record").style.width = 60;
-	document.getElementById("record").style.height = 60;
-	document.getElementById("record").style.borderWidth = 8;
-	document.getElementById("check").style.opacity = "1";
+
+	var imgID = $(this).attr('id') //
+	console.log("now is " + imgID);
+
+	if (imgID == "record1") {
+		$(this).attr("src", "/images/r2.png");
+		$(this).attr("id", "record2");
+		document.getElementById("check").style.opacity = "0";
+	}
+	else {
+		document.getElementById("check").style.opacity = "1";
+		$(this).attr("src", "/images/r1.png");
+		$(this).attr("id", "record1");
+	}
 
 }
+
+
+function on() {
+	document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+	document.getElementById("overlay").style.display = "none";
+  }
 
 /* Login */
 

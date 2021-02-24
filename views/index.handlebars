@@ -1,12 +1,14 @@
 <html>
+
 <head>
 	<title>Compass</title>
 	<meta charset="utf-8">
-	
+
 	{{!-- Add script --}}
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/eventHandler.js"></script>
+	<script src="js/diaryHandler.js"></script>
 
 	{{!-- Add link --}}
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -15,17 +17,57 @@
 	<link href="css/menu.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<style>
+		b1 {
+			color: white;
+		}
+	</style>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-	
+
 	{{!-- side bar code --}}
 	<div id="mySidenav" class="sidenav">
-		<img src="/images/LOGO_light.png" alt="logo" class="img-responsive" style="width:80px; height:80px; left-margin:10%">
+		<img src="/images/LOGO_light.png" alt="logo" class="img-responsive"
+			style="width:80px; height:80px; margin-left:10%">
+		<div><br></div>
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">About</a>
-		<a href="#">Help</a>
-		<a href="#">Contact</a>
+		<a href="#">
+			<h3>ABOUT</h3>
+		</a>
+		<a href="#">
+			<h3>HELP</h3>
+		</a>
+		<a href="#">
+			<h3>CONTACT</h3>
+		</a> 
+	</div>
+
+	{{!-- filter overlay code --}}
+	<div id="myFilter" class="filter">
+		{{!-- <a href="javascript:void(0)" class="closeFilter" onclick="closeFilter()">&times;</a> --}}
+		<a href="javascript:void(0)" class="closeFilter" onclick="closeFilter()"><i class="fa fa-check-circle" style="font-size: 30px; color: white;"></i></a>
+		<div class="horizontal-container">
+			<div class="block">
+				<b1>Diary Type</b1>
+			</div>
+			<div class="block">
+				<b1 style="border: 1px solid white; padding-left: 10px; padding-right: 10px;">video</b1>
+			</div>
+			<div class="block">
+				<b1 style="border: 1px solid white; padding-left: 10px; padding-right: 10px;">voice</b1>
+			</div>
+		</div>
+		<div class="horizontal-container">
+			<div class="block">
+				<b1>Time Frame</b1>
+			</div>
+			<div class="block">
+				<input type="range" min="1" max="100" value="50">
+			</div>
+		</div>
 	</div>
 
 	{{!-- put icons in a row --}}
@@ -34,53 +76,58 @@
 
 		{{!-- menu icon --}}
 		<div class="block" id="menu-icon">
-			<span onclick="openNav()"><i class="fa fa-bars" style="font-size: 20px; color: #995762;"></i></span> 
+			<span onclick="openNav()"><i class="fa fa-bars" style="font-size: 20px; color: #995762;"></i></span>
 		</div>
 
 		{{!-- search bar --}}
 		<div class="block" id="search-bar">
 			<input type="text" placeholder="Search...">
-			<a href="#"><i class="fa fa-fw fa-search" style="font-size: 20px; color: #995762;"></i></a> 
+			<a href="#"><i class="fa fa-fw fa-search" style="font-size: 20px; color: #995762;"></i></a>
 		</div>
-		
+
 		{{!-- filter icon --}}
-		<div class="block", id="filter-icon">
-			<a href="filter"><i class="fa fa-sliders" aria-hidden="true" style="font-size: 20px; color: #995762;"></i></a>
+		<div class="block" , id="filter-icon">
+			<span onclick="openFilter()"><i class="fa fa-sliders" aria-hidden="true"
+					style="font-size: 20px; color: #995762;"></i></span>
 		</div>
-		
+
 		{{!-- manage icon --}}
 		<div class="block" id="manage-icon">
-			<a href="manage"><i class="fa fa-edit" style="font-size: 20px; color: #995762;"></i></a> 
+			<a href="manage"><i class="fa fa-edit" style="font-size: 20px; color: #995762;"></i></a>
 		</div>
-		
+
 	</div>
-	
+
 	{{!-- diary --}}
 	<div class="container">
 		<div class="diary-page">
 			{{#each diaries}}
-				<a href="/content/{{id}}">
-					<button class="diary">
-						<div id="date">
-							<h4 style="text-shadow: 4px 4px 5px #797979;">{{date}}</h4>
-						</div>
-						<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
-					</button>
-				</a>
-				<hr>
+			<a href="/content/{{id}}">
+				<button class="diary">
+					<div id="date">
+						<h4 style="text-shadow: 4px 4px 5px #797979;">{{date}}</h4>
+					</div>
+					<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
+				</button>
+			</a>
+			<hr>
 			{{/each}}
 		</div>
-		
+
 	</div>
 
 	{{!-- lower menu --}}
 	<div id="rectangle" style="bottom: 0; height: 100px; opacity: 0.6"></div>
 	<div class="lower-menu">
-		<a href="world"><i id="world" class="fa fa-globe block" aria-hidden="true" style="font-size: 60px; color: #995762;"></i></a>
-		<a href="create"><i id="add" class="fa fa-plus-circle block" aria-hidden="true" style="font-size: 61.2px; color: #995762;"></i></a>
-		<a href="account"><i id="account" class="fa fa-user-circle block" aria-hidden="true" style="font-size: 52px; color: #995762;"></i></a>
+		<a href="world"><i id="world" class="fa fa-globe block" aria-hidden="true"
+				style="font-size: 60px; color: #995762;"></i></a>
+		<a href="create"><i id="add" class="fa fa-plus-circle block" aria-hidden="true"
+				style="font-size: 61.2px; color: #995762;"></i></a>
+		<a href="account"><i id="account" class="fa fa-user-circle block" aria-hidden="true"
+				style="font-size: 52px; color: #995762;"></i></a>
 	</div>
 
 
 </body>
+
 </html>

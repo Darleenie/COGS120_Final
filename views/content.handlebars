@@ -7,6 +7,15 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+    	{{!-- Add script --}}
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery-1.11.0.js"></script>
+    <script src="/js/diaryHandler.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,12 +25,45 @@
     <![endif]-->
   </head>
   <body>
-	<!-- this is a comment in HTML -->
-	<div class="container">
-		<div class="jumbotron">
-        <img src="{{id}}">
-  			<p>one-sentence description of project</p>
+	{{!-- put icons in a row --}}
+	<div class="top-bar">
+		<div id="rectangle"></div>
+
+		{{!-- menu icon --}}
+		<div class="block" id="menu-icon">
+			<i class="fa fa-chevron-left" style="font-size: 20px; color: #995762; text-align:left"></i></span>
 		</div>
+
+    <div class="block" id="menu-icon" style="margin-left:35%;"><h2>FEB 10, 2021</h2></div>
+	</div>
+    <div class="container">
+      <div class="jumbotron video" style="background-color: white;">
+          <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg">
+          <div>
+            <div><h3>COMMENTS</h3></div>
+                <div class="line"></div>
+                <div class="block" id="search-bar">
+                  <input type="text" placeholder="Add comment...">
+                  <a href="#"><i class="fa fa-fw fa-check" style="font-size: 20px; color: #995762;"></i></a>
+                </div>
+          </div>
+        
+      </div>
+      </div>
+
+      {{!-- Comments --}}
+     
+      <div>
+        {{#each comments}}
+          <div style="margin-left:10%">
+            <b2>{{date}}</b2> 
+            <br>
+            <div><b1>{{description}}</b1></div>
+          </div>
+        <hr>
+        {{/each}}
+      </div>
+      
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

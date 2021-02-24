@@ -8,6 +8,8 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/eventHandler.js"></script>
+    {{> facebook}}
+	<script src="js/facebook.js"></script>
 
     {{!-- Add link --}}
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -21,44 +23,63 @@
 
 <body>
 
-    <form action="/index" method="get" id="ajaxForm"> 
+    <form action="/index" method="get" id="ajaxForm">
 
         {{!-- logo --}}
         <div class="imgcontainer">
-            <img src="/images/LOGO_login.png" style="width:150; height:190" alt="logo">
+            <img src="/images/LOGO_login.png" style="width:130; height:auto" alt="logo">
         </div>
 
         <div class="container">
             {{!-- Username --}}
-            <label for="uname"><b>Username</b></label>
+            {{!-- <label for="uname"><b><b1>Username</b1></b></label> --}}
             <input type="text" placeholder="Enter Username" name="uname" required>
 
             {{!-- Password --}}
-            <label for="psw"><b>Password</b></label>
+            {{!-- <label for="psw"><b><b1>Password</b1></b></label> --}}
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <div><br></div>
 
-            {{!-- Login --}}
-            <button type="submit"><h2 style="font-size: 20px; color: white; line-height: 0; margin-bottom: 16px;">LOGIN</h2></button>
+
             <label class="horizontal-container">
-                <span class="psw block"><input type="checkbox" checked="checked" name="remember"> Remember me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
-                <span class="psw block">Forgot <a href="#">password?</a></span>
+                <span class="psw block"><input type="checkbox" checked="checked" name="remember">
+                    <b1>Remember me &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</b1>
+                </span>
+                <span class="psw block">
+                    <b1>Forgot</b1> <a href="#">
+                        <b1>password?</b1>
+                    </a>
+                </span>
             </label>
+            <div><br></div>
+            {{!-- Login --}}
+            <button type="submit">
+                <h2 style="font-size: 20px; color: white; line-height: 0; margin-bottom: 16px;">LOGIN</h2>
+            </button>
+
+            <div class="horizontal-container">
+                <b1 class="block" style="text-align: center;">or</b1>
+            </div>
+
+            <div class="horizontal-container">
+                {{!-- other sources login --}}
+                {{!-- <input class="block" type="image" height=60 width=auto src="/images/fblogin.png"> --}}
+                <fb:login-button class="block" scope="public_profile,email" onlogin="checkLoginState();"><img src="/images/fblogin.png" height=60 width=auto></fb:login-button>
+                <input class="block" type="image" height=60 width=auto src="/images/googlelogin.png">
+            </div>
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <p class="signup" style="margin-left:28%"><a href='signup'> New user? Sign up here</a></p>
+        <div class="container" style="background-color:#F3F0E7">
+            <p class="signup" style="margin-left:28%"><a href='signup'>
+                    <b1>New user? Sign up here</b1>
+                </a></p>
         </div>
 
-        {{!-- <div>
-            <a href='signup'>New user? Sign up here</a>
-        </div> --}}
-        
+
     </form>
 
 
 
 
-    </body>
-</html>
+</body>
 
+</html>

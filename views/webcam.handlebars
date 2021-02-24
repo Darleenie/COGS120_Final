@@ -1,46 +1,69 @@
 <html>
-    <head>
-        <title>Compass Webcam</title>
-        <meta charset="utf-8">
-        
-        {{!-- Add script --}}
-        <script src="js/bootstrap.js"></script>
-        <script src="js/jquery-1.11.0.js"></script>
-        <script src="js/eventHandler.js"></script>
 
-        {{!-- Add link --}}
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <link href="css/webcam.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Compass Webcam</title>
+    <meta charset="utf-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    {{!-- Add script --}}
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/eventHandler.js"></script>
 
-    <body>
-        {{!-- video --}}
-        <div>
-            <video autoplay="true" id="videoElement"></video>
-            <script>
-                var video = document.querySelector("#videoElement");
-                if (navigator.mediaDevices.getUserMedia) {
+    {{!-- Add link --}}
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/webcam.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {{!-- video --}}
+    <div>
+        <video autoplay="true" id="videoElement"></video>
+        <script>
+            var video = document.querySelector("#videoElement");
+            if (navigator.mediaDevices.getUserMedia) {
                 navigator.mediaDevices.getUserMedia({ video: true })
                     .then(function (stream) {
-                    video.srcObject = stream;
+                        video.srcObject = stream;
                     })
                     .catch(function (err0r) {
-                    console.log("Something went wrong!");
+                        console.log("Something went wrong!");
                     });
-                }
-            </script>
+            }
+        </script>
+    </div>
+
+
+    {{!-- filter section --}}
+        <div id="overlay" onclick="off()">
+            <div id="content">
+                <div class="wrapper">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
         </div>
 
-        {{!-- start button --}}
-        <div class="lower-icon webcam-lower-bar">
-            <a href="/create"><i class="fa fa-chevron-left fa-3x block" style="color:white; margin-right:20%"></i></a>
-            <a><button id="record" class="round-button block"></button></a>
-            <a href="/index"><i id="check" class="fa fa-check fa-3x block" style="color:white; margin-left:16%; opacity:0"></i></a>
+        <div style="padding:20px">
+            <h2>Overlay with Text</h2>
+            {{!-- <button onclick="on()">Turn on overlay effect</button> --}}
         </div>
-    </body>
+
+
+
+    {{!-- start button --}}
+    <div class="lower-icon">
+        <a href="/create"><i class="fa fa-chevron-left fa-3x block" style="color:white; margin-right:20%"></i></a>
+        <button class="record-img block"><img id="record1" src="/images/r1.png" alt="recording"></button>
+
+        <i onclick="on()" id="check" class="fa fa-check fa-3x block"
+                style="color:white; margin-left:16%; opacity:0"></i>
+    </div>
+</body>
+
 </html>
