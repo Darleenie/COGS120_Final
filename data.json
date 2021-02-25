@@ -4,37 +4,37 @@
 			"id": 1,
 			"date": "FEB 10, 2021",
 			"description": "Has awesome pet mice",
-			"imageURL": "/images/diaries/diary1.jpeg"			
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/3/31/19_June-1_%2850384477361%29.jpg"			
 		},
 		{
 			"id": 2,
 			"date": "FEB 9, 2021",
 			"description": "Great at sketching",
-			"imageURL": "/images/diaries/diary2.JPG"			
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/0/0d/%E2%80%98LG_Q7_BTS_%EC%97%90%EB%94%94%EC%85%98%E2%80%99_%EC%98%88%EC%95%BD_%ED%8C%90%EB%A7%A4_%EC%8B%9C%EC%9E%91_%2842773472410%29_%28cropped%29.jpg"			
 		},
 		{
 			"id": 3,
 			"date": "FEB 7, 2021",
 			"description": "Loves Trukese navigators",
-			"imageURL": "/images/diaries/diary3.jpeg"			
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Line_FriendsStore_BT21_04.jpg/2880px-Line_FriendsStore_BT21_04.jpg"			
 		},
 		{
 			"id": 4,
 			"date": "FEB 6, 2021",
 			"description": "Has awesome pet mice",
-			"imageURL": "/images/diaries/diary4.jpeg"
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Center_Hall_Front%2C_UCSD.JPG/1920px-Center_Hall_Front%2C_UCSD.JPG"
 		},
 		{
 			"id": 5,
 			"date": "FEB 4, 2021",
 			"description": "Great at sketching",
-			"imageURL": "/images/diaries/diary5.jpeg"		
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/170719_Mamamoo_%EB%A7%88%EB%A7%88%EB%AC%B4_02_%28cropped%29.jpg/1920px-170719_Mamamoo_%EB%A7%88%EB%A7%88%EB%AC%B4_02_%28cropped%29.jpg"		
 		},
 		{
 			"id": 6,
 			"date": "FEB 3, 2021",
 			"description": "Loves Trukese navigators",
-			"imageURL": "/images/diaries/diary6.jpeg"	
+			"imageURL": "https://upload.wikimedia.org/wikipedia/commons/1/17/Navy-FloodedNewOrleans.jpg"	
 		}
 	]
 }
