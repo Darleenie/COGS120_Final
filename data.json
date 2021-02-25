@@ -4,37 +4,37 @@
 			"id": 1,
 			"date": "FEB 10, 2021",
 			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+			"imageURL": "/images/diaries/diary1.jpeg"			
 		},
 		{
 			"id": 2,
 			"date": "FEB 9, 2021",
 			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+			"imageURL": "/images/diaries/diary2.JPG"			
 		},
 		{
 			"id": 3,
 			"date": "FEB 7, 2021",
 			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
+			"imageURL": "/images/diaries/diary3.jpeg"			
 		},
 		{
 			"id": 4,
 			"date": "FEB 6, 2021",
 			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+			"imageURL": "/images/diaries/diary4.jpeg"
 		},
 		{
 			"id": 5,
 			"date": "FEB 4, 2021",
 			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+			"imageURL": "/images/diaries/diary5.jpeg"		
 		},
 		{
 			"id": 6,
 			"date": "FEB 3, 2021",
 			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
+			"imageURL": "/images/diaries/diary6.jpeg"	
 		}
 	]
 }
