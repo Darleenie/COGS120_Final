@@ -36,13 +36,13 @@
             document.getElementById("demo").innerHTML = formatAMPM();
 
             function formatAMPM() {
-            var d = new Date(),
-            minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
-            hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
-            ampm = d.getHours() >= 12 ? 'pm' : 'am',
-            months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-            days = ['Sunday','Monday','Tuesday','Wednesday','Thusday','Friday','Saturday'];
-            return days[d.getDay()]+'<br>'+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+'<br>'+hours+':'+minutes+ampm;
+                var d = new Date(),
+                minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+                hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+                ampm = d.getHours() >= 12 ? 'pm' : 'am',
+                months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+                days = ['Sunday','Monday','Tuesday','Wednesday','Thusday','Friday','Saturday'];
+                return days[d.getDay()]+'<br>'+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+'<br>'+hours+':'+minutes+ampm;
             }
         </script>
 

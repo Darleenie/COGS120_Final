@@ -1,5 +1,4 @@
 'use strict';
-
 //Barrage timer
 var timers = [];
 //Controlling the explicit and hidden variables of barrage
@@ -21,7 +20,11 @@ function initializePage() {
         var jqueryDom = createScreenbullet($("#screenBulletText").val());
         //Add scheduled task
         addInterval(jqueryDom);
-    });
+        // var info = $(".comment-section").text();
+        // console.log("here" + info);
+        // $(".comment-section").html("{{#each comments}}<div><b2>{{date}}</b2><br><div><b1>{{description}}</b1></div></div><hr>{{/each}}");
+        // $("#comment-section").load("content"+" #comment-section")
+        $("h4").html("COMMENTS (refresh for new comments)")
     //Monitor close button
     // $(".clear").on("click", function () {
     //     if (isShow) {
@@ -32,6 +35,7 @@ function initializePage() {
     //         isShow = true;
     //     }   
     // });
+    });
 }
 
 //Create a new barrage

@@ -1,4 +1,5 @@
 var data = require("../data.json");
+var comments = require('../comments.json');
 
 exports.addDiary = function(request, response) {   
 	
@@ -17,3 +18,27 @@ exports.addDiary = function(request, response) {
         response.render('index', data);
 
 }
+
+exports.addComment = function(req, res){
+    // console.log(comments);
+
+    var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var time = hours+':'+minutes+ampm+", "+months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+
+    newComment = {
+        "date": time, 
+        "description": req.query.description
+    };
+
+    comments.comments.unshift(newComment);
+    console.log("after " + comments);
+    // $("#comment-section").html(
+    //     "{{#each comments}}<div style=\"margin-left:10%\"> <b2>{{date}}</b2> <br><div><b1>{{description}}</b1></div></div><hr>{{/each}}");
+    // res.json(comments);
+    // res.render();
+    return;
+};

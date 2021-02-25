@@ -13,9 +13,11 @@ function initializePage() {
 
 	// $('#colorBtn').click(randomizeColors);
 	var count = 0;
-	$("button img").click(checkClick);
-	$(".fa-check").click(finishRecord);
+	$("#webcam-record-button img").click(checkClick);
+	$("#upload #check").click(finishRecord);
 	$(".box").click(addFilter);
+	$("#voicerecorder .voiceRecorderBtn").click(checkRecorderClick);
+	$("#check1").click(addVoice);
 }
 
 /* Set the width of the side navigation to 250px */
@@ -61,7 +63,7 @@ function checkClick(){
 
 function finishRecord(){
 	document.getElementById("overlay").style.display = "block";
-	$("button img").attr("src", "/images/play.png");
+	$("#webcam-record-button img").attr("src", "/images/play.png");
 	document.getElementById("check").style.opacity = "0"
 }
   
@@ -75,9 +77,34 @@ function addFilter(){
 
 function off() {
 	document.getElementById("overlay").style.display = "none";
-  }
+}
 
 
+/* voice recorder */
+
+function checkRecorderClick(){
+
+	var imgID = $(this).attr('id') 
+	console.log("now is " + imgID +". It is recording voice now.");
+
+	if (imgID == "recordvoice1") {
+		$(this).attr("src", "/images/r2.png");
+		$(this).attr("id", "recordvoice2");
+		$("#waveform").attr("src", "/images/recordvoice_active.gif");
+		document.getElementById("check1").style.opacity = "0";
+	}
+	else {
+		document.getElementById("check1").style.opacity = "1";
+		$(this).attr("src", "/images/r1.png");
+		$(this).attr("id", "recordvoice1");
+		$("#waveform").attr("src", "/images/recordvoice_default.png");
+	}
+}
+
+function addVoice(){
+	document.getElementById("check1").style.opacity = "1";
+	$("a#uploadVoice").attr('href', '/addvoice');
+}
 
 /* Login */
 

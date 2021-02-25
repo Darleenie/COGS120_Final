@@ -1,29 +1,47 @@
 <html>
-    <head>
-        <title>Compass voice recording</title>
-        <meta charset="utf-8">
-        
-        {{!-- Add script --}}
-        <script src="js/bootstrap.js"></script>
-        <script src="js/jquery-1.11.0.js"></script>
-        <script src="js/eventHandler.js"></script>
 
-        {{!-- Add link --}}
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Compass voice recording</title>
+    <meta charset="utf-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    {{!-- Add script --}}
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/eventHandler.js"></script>
 
-    <body>
-        <div style="text-align: center">
+    {{!-- Add link --}}
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/webcam.css" rel="stylesheet">
+    <link href="css/voice.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {{!-- <div style="text-align: center">
             
             <p> Voice recording page</p>
 
             <a href="/"><p> return to home<p></a>
 
-        </div>
-    </body>
+        </div> --}}
+    {{!-- voice recorder --}}
+    <div class="box">
+        <img id="waveform" src="images/recordvoice_default.png" width="375" height="auto" style="margin-top: 100px;">
+    </div>
+
+    {{!-- start button --}}
+    <div class="lower-icon">
+        <a href="/create"><i class="fa fa-chevron-left fa-3x block" style="color:white; margin-right:20%"></i></a>
+        <button id="voicerecorder" class="record-img block"><img id="recordvoice1" class="voiceRecorderBtn"
+                src="/images/r1.png" alt="recording"></button>
+
+        <a id="uploadVoice"><i class="fa fa-check fa-3x block" id="check1"
+                style="color:white; margin-left:16%; opacity:0"></i></a>
+
+</body>
+
 </html>

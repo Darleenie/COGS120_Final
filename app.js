@@ -20,6 +20,11 @@ var webcam = require('./routes/webcam');
 var voice = require('./routes/voice');
 var content = require('./routes/content');
 var add = require('./routes/add');
+var addVoice = require('./routes/addVoice');
+var about = require('./routes/about');
+var help = require('./routes/help');
+var contact = require('./routes/contact');
+// var addComment = require('./routes/addComment');
 // Example route
 // var user = require('./routes/user');
 
@@ -57,6 +62,11 @@ app.get('/webcam', webcam.view);
 app.get('/voice', voice.view);
 app.get('/content/:id', content.viewPrev);
 app.get('/add', add.addDiary);
+app.get('/addComment', add.addComment);
+app.get('/addVoice', addVoice.addDiary);
+app.get('/about', about.view);
+app.get('/help', help.view);
+app.get('/contact', contact.view);
 
 
 // Example route

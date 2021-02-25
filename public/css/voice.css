@@ -1,0 +1,22 @@
+.recordvoice {
+    width: 110px;
+	height: 100px;
+	background: white;
+	text-align: center;
+    display: inline-block;
+    background-image: none;
+}
+
+.box {
+    max-width: 352px;
+	height: 519px;
+	object-fit: cover;
+	background-image: url('../images/recordvoice_default.png');
+	position: absolute;
+	/* margin: auto; */
+	/* text-align: center; */
+	margin-left: 3.2%;
+	margin-right: 3.2%;
+	margin-top: 5.7%;
+	margin-bottom: 16.49%;
+}

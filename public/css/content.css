@@ -5,6 +5,11 @@
     height: 206px;
 }
 
+video {
+    width: 288px;
+    height: 206px;
+}
+
 .top-bar {
 	display: flex;
 	/* position: fixed; */
@@ -23,7 +28,7 @@ h2 {
     position: relative;
     width: 288px;
     height: 206px;
-    margin: 30px auto;
+    /* margin: 30px auto; */
     background: #000;
     overflow: hidden;
 }
