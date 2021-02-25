@@ -14,6 +14,8 @@ function initializePage() {
 	// $('#colorBtn').click(randomizeColors);
 	var count = 0;
 	$("button img").click(checkClick);
+	$(".fa-check").click(finishRecord);
+	$(".box").click(addFilter);
 }
 
 /* Set the width of the side navigation to 250px */
@@ -53,17 +55,29 @@ function checkClick(){
 		$(this).attr("src", "/images/r1.png");
 		$(this).attr("id", "record1");
 	}
+}
 
+/* click to open filter sections(finish recording)*/
+
+function finishRecord(){
+	document.getElementById("overlay").style.display = "block";
+	$("button img").attr("src", "/images/play.png");
+	document.getElementById("check").style.opacity = "0"
+}
+  
+function addFilter(){
+	document.getElementById("check").style.opacity = "1";
+	$("a#upload").attr('href', '/add');
+	
 }
 
 
-function on() {
-	document.getElementById("overlay").style.display = "block";
-  }
-  
-  function off() {
+
+function off() {
 	document.getElementById("overlay").style.display = "none";
   }
+
+
 
 /* Login */
 

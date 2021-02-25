@@ -19,6 +19,7 @@ var manage = require('./routes/manage');
 var webcam = require('./routes/webcam');
 var voice = require('./routes/voice');
 var content = require('./routes/content');
+var add = require('./routes/add');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,6 +56,7 @@ app.get('/manage', manage.view);
 app.get('/webcam', webcam.view);
 app.get('/voice', voice.view);
 app.get('/content/:id', content.viewPrev);
+app.get('/add', add.addDiary);
 
 
 // Example route
