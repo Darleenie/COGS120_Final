@@ -212,12 +212,12 @@ b2 {
     line-height: 22px; 
   }
 
-  .line{
+.line{
 	width: 288px;
 	height: 2px;
 	border-bottom: 1px solid black;
 	position: absolute;
 	/* box-shadow: 5px 5px #888888; */
 	text-shadow: 4px 4px 5px #797979;
-	}
+}
 

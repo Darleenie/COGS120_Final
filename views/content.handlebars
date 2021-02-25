@@ -3,6 +3,7 @@
   <head>
     <title>Content</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -14,8 +15,9 @@
 
     	{{!-- Add script --}}
     <script src="/js/bootstrap.js"></script>
-    <script src="/js/jquery-1.11.0.js"></script>
+    <script src="/js/jquery-3.5.1.js"></script>
     <script src="/js/diaryHandler.js"></script>
+    <script src="/js/barrage_wall.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,22 +36,23 @@
 			<a href="/index"><i class="fa fa-chevron-left" style="font-size: 20px; color: #995762; text-align:left"></i></a>
 		</div>
 
-    <div class="block" id="menu-icon" style="margin-left:35%;"><h2>FEB 10, 2021</h2></div>
+    <div class="block" style="margin-left:35%;"><h2>FEB 10, 2021</h2></div>
 	</div>
     <div class="container">
       <div class="jumbotron video" style="background-color: white;">
-          <video class="video" src="/images/diaries/diary_video.mp4">
-          <div>
-            <div><h3>COMMENTS</h3></div>
-                <div class="line"></div>
-                <div class="block" id="search-bar">
-                  <input type="text" placeholder="Add comment...">
-                  <a href="#"><i class="fa fa-fw fa-check" style="font-size: 20px; color: #995762;"></i></a>
-                </div>
-          </div>
-        
+
+          <div class="screen_container"></div>
+              <div><h3>COMMENTS</h3></div>
+              <div class="line"></div>
+              <div class="screen_toolbar">
+                  <div class="block" id="search-bar">
+                    <input id = "screenBulletText" type ="text" placeholder="Add comment..."/>
+                    <button class = "send" style="background-color:white; border:none" > <i class="fa fa-fw fa-check" style="font-size: 20px; color: #995762;"></i> </button>
+                    {{!-- <button class = "clear" style="background-color:white; border:none" > <i class="fa fa-comment-slash" style="font-size: 20px; color: #995762;"></i> </button> --}}
+                  </div>
+              </div>
       </div>
-      </div>
+    </div>
 
       {{!-- Comments --}}
      

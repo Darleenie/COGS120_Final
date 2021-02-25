@@ -10,7 +10,7 @@
 	/* position: fixed; */
 	position: sticky;
 	top: 0;
-	margin-top: 10px;
+	margin-top: 5px;
 	/* top: 10px; */
 	z-index: 2;
 }
@@ -18,3 +18,28 @@
 h2 {
     font-weight: 300;
 }
+
+.screen_container{
+    position: relative;
+    width: 288px;
+    height: 206px;
+    margin: 30px auto;
+    background: #000;
+    overflow: hidden;
+}
+
+input[type=text] {
+    width: 210px;
+    height: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #8E7B4B;
+    box-sizing: border-box;
+    border-radius: 20px; 
+  }
+/* .screen_toolbar{
+    width: 200px;
+    /* margin: 20px auto; */
+    /* text-align: center;
+} */
