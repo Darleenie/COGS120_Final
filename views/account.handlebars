@@ -12,17 +12,38 @@
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/account.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-        <div style="text-align: center">
+    
             
-            <p> Account page</p>
+        {{!-- menu icon --}}
+		<div class="block" id="menu-icon">
+			<a href="/index"><i class="fa fa-chevron-left" style="font-size: 20px; color: #995762; text-align:left"></i></a>
+		</div>
 
-            <a href="/"><p> return to home<p></a>
+        {{!-- profile info --}}
+
+        <div class="imgcontainer">
+            <img src="/images/pic.png" style="width:130; height:auto" alt="profile-pic">
+        </div>
+
+        <div class="profile-card"> 
+            <h1 id="username" style="text-align:center" >Username</h1>
+
+            <h3 style="text-align:center">Email: compass@iamhappy.com</h3>
+            <h3 style="text-align:center" >Password: *********</h3>
+
+            <a href="/"><button id="logout">
+                <h2 style="font-size: 20px; color: white; line-height: 0; margin-bottom: 16px;">LOGOUT</h2>
+            </button></a>
+
+            
+        
 
         </div>
     </body>
