@@ -5,16 +5,20 @@
 	<meta charset="utf-8">
 
 	{{!-- Add script --}}
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/eventHandler.js"></script>
-	<script src="js/diaryHandler.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/jquery-3.5.1.js"></script>
+	<script src="/js/eventHandler.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	{{!-- <script src="js/diaryHandler.js"></script> --}}
 
 	{{!-- Add link --}}
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/menu.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="/css/jquery-ui.css">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/menu.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
@@ -45,19 +49,42 @@
 		</a> 
 	</div>
 
+	<script>
+		$(function() {
+			$( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 500,
+			values: [ 75, 300 ],
+			slide: function( event, ui ) {
+				$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+			});
+			//$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+			//" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+		});
+  </script>
+
+
 	{{!-- filter overlay code --}}
 	<div id="myFilter" class="filter">
 		{{!-- <a href="javascript:void(0)" class="closeFilter" onclick="closeFilter()">&times;</a> --}}
-		<a href="javascript:void(0)" class="closeFilter" onclick="closeFilter()"><i class="fa fa-check-circle" style="font-size: 30px; color: white;"></i></a>
+		{{!-- <a href="/filter/video" style="margin:0 0"> javascript:void(0) --}}
+			<a href="/filterDiary/{{types}}" class="closeFilter" onclick="closeFilter()"><i class="fa fa-check-circle" style="font-size: 30px; color: #F3F0E7;"></i></a>
+		{{!-- </a> --}}
 		<div class="horizontal-container">
 			<div class="block">
 				<b1>Diary Type</b1>
 			</div>
-			<div class="block">
-				<b1 style="border: 1px solid white; padding-left: 10px; padding-right: 10px;">video</b1>
+			<div id="videoFilter" class="block">
+				<span onclick="applyFilter('video')">
+					<b1 id="videoFilter-text" style="border: 1px solid #F3F0E7; padding-left: 10px; padding-right: 10px;">video</b1>
+				</span>
 			</div>
-			<div class="block">
-				<b1 style="border: 1px solid white; padding-left: 10px; padding-right: 10px;">voice</b1>
+			<div id="audioFilter" class="block">
+					<span onclick="applyFilter('audio')">
+						<b1 id="audioFilter-text" style="border: 1px solid #F3F0E7; padding-left: 10px; padding-right: 10px;">voice</b1>
+					</span>
 			</div>
 		</div>
 		<div class="horizontal-container">
@@ -65,7 +92,8 @@
 				<b1>Time Frame</b1>
 			</div>
 			<div class="block">
-				<input type="range" min="1" max="100" value="50">
+				<div id="slider-range"></div>
+				{{!-- <input type="range" min="1" max="100" value="50"> --}}
 			</div>
 		</div>
 	</div>
@@ -97,6 +125,8 @@
 		</div>
 
 	</div>
+
+	<div class="filter-result" style="z-index: 1;weight:500;text-align:center;color: #995762; margin-top:40px"><h5>{{whitespace}}</h5></div>
 
 	{{!-- diary --}}
 	<div class="container">

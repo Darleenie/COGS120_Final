@@ -8,6 +8,7 @@ exports.addDiary = function(request, response) {
     var currentDate = months[d.getMonth()] + ' ' + d.getDate() + ', ' + '2021'
 
     var newDiary = {
+            "type": "video",
             "id": 7,
             "date": currentDate,
             "description": "Has awesome pet mice",
@@ -20,8 +21,6 @@ exports.addDiary = function(request, response) {
 }
 
 exports.addComment = function(req, res){
-    // console.log(comments);
-
     var d = new Date(),
     minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
     hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
@@ -42,3 +41,33 @@ exports.addComment = function(req, res){
     // res.render();
     return;
 };
+
+exports.filter = function(req,res){
+    // console.log("data: "+n.type);
+    var newData = JSON.parse(JSON.stringify(data));
+    var id = req.params.id;
+    console.log("q: "+ req.params.id);
+    newData.diaries = data.diaries.filter(function (e){
+        console.log("type: "+e.type);
+        if(id == 'video'){
+            return e.type ==='video';
+        }else{
+            return e.type ==='audio';
+        }
+        
+    });
+    newData.whitespace = "Filtered! Check the result below!"
+    console.log("data: "+ newData.whitespace);
+    res.render('index', newData);
+
+    // res.render('index', data);
+
+}
+
+exports.deleteV = function(req,res){
+    
+    var deleteID = req.query.id;
+    delete data.diaries[deleteID - 1];
+    res.render("manage", data);
+
+}
