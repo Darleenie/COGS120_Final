@@ -22,13 +22,13 @@ button.edit {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
-    width: 130px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     border-radius: 10px;
   }
 
 #edit-thumbnail{
-    margin-left: 180px;
+    margin-left: 235px;
     margin-top: -110px;
 }
 
@@ -49,7 +49,7 @@ button.edit {
 }
 
 #edit-date{
-    margin-left: 180px;
+    margin-left: 235px;
     margin-top: -35px;
 }
 
@@ -63,7 +63,7 @@ button.edit {
 }
 
 #edit-location{
-    margin-left: 180px;
+    margin-left: 235px;
     margin-top: -35px;
 }
 
@@ -75,4 +75,32 @@ button.edit {
     margin-top: 10px;
    
   }
+
+  /* tags */
+
+.each-tag {
+    display: inline-block;
+
+}
+
+.tag-button{
+    background-color: #F3F0E7;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    width: 110px;
+    height: 30px;
+    margin-top: 5px;
+  }
+
+.tag-text {
+    color: #8E7B4B;
+}
+
+#edit-tags {
+    margin-left: 235px;
+    margin-top: 10px;
+
+}
+
 

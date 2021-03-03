@@ -34,26 +34,50 @@
                 <div class="edit-diary">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/19_June-1_%2850384477361%29.jpg" alt="Lorem Pixel image" class="img-responsive">
                 
-                <a href="#"><button class="edit" id="edit-thumbnail"><h3 class="text">edit thumbnail</h3></button></a>
+                <a href="#"><button class="edit" id="edit-thumbnail"><h3 class="text">Edit thumbnail</h3></button></a>
                 </div>
                 
 
                 <div>
-                    <a href="#"><button id="date"><p class="info">Feb 10, 2021</p></button></a>
-                    <a href="#"><button class="edit" id="edit-date"><h3 class="text">edit date</h3></button></a>
+                    <button id="date"><p class="info">Feb 10, 2021</p></button>
+                    <a href="#"><button class="edit" id="edit-date"><h3 class="text">Edit date</h3></button></a>
                     
-                    <a href="#"><button id="location"><p class="info">Shanghai, China</p></button></a>
-                    <a href="#"><button class="edit" id="edit-location"><h3 class="text">edit location</h3></button></a>
+                    <button id="location"><p class="info">Shanghai, China</p></button>
+                    <a href="#"><button class="edit" id="edit-location"><h3 class="text">Edit location</h3></button></a>
                 </div>
-            </div>
 
-            <hr>
-
-
-            {{!-- tags --}}
-            <div>
+                <hr>
+                
 
             </div>
+
+
+            <div class="container">
+                    {{#each tags}}
+                    <div class="each-tag" id="{{id}}">
+                    <button class="tag-button">
+                        <p class="tag-text">{{name}}</p>
+                     </button>
+                     </div>
+                    {{/each}}
+
+                    <a href="#"><button class="edit" id="edit-tags"><h3 class="text">Edit tags</h3></button></a>
+            </div>  
+           
+            
+
+
+            
+
+            {{!-- <div>
+                {{#each tabs}}
+				<button class="tab-button" id="{{id}}">
+						<p class="tab-text">{{name}}</p>
+                        <p class="tab-text"> | </p>
+                        <p class="tab-text">  X </p>
+				</button>
+			    {{/each}}
+            </div> --}}
 
 
 </body>

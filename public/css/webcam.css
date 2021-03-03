@@ -66,6 +66,13 @@ button {
 	  color: white;
 
   }
+
+  #box1:active #box2:active #box3:active{
+	/* border-style: solid;
+	border-color: #BB889F; */
+	/* background: #BB889F; */
+
+  }
   
  .wrapper {
   overflow: hidden;
