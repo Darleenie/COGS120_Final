@@ -1,0 +1,24 @@
+{
+	"tags": [
+		{
+            "id": 1,
+			"name": "daily"
+        },
+		{
+            "id": 2,
+			"name": "sunset"
+        },
+		{
+            "id": 3,
+			"name": "weekday"
+        },
+        {
+            "id": 4,
+            "name": "travel"
+        },
+        {
+            "id": 5,
+            "name": "work"
+        }
+	]
+}

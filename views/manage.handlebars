@@ -43,10 +43,22 @@
 						<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
 					</button>
 					<div class="ma-icons" style="display:inline-block; margin-right:0%">
-					<a href="/edit"><img class="edit-icon" src="/images/edit.png"></a>
-					<img class="download-icon" src="/images/download.png">
-					<img class="delete-icon" src="/images/delete.png">
+						<a href="/edit"><img class="edit-icon" src="/images/edit.png"></a>
+						<img class="download-icon" src="/images/download.png">
+						<img class="delete-icon" src="/images/delete.png">
 					</div>
+
+
+					<div id="overlay-alert">
+						<div class="alert-box">
+							<div id="content">
+								<div><h3 id="title">Delete Diary?</h3></div>
+								<button id="cancel-button" class="alert-button"><p class="alert-text">Cancel</p></button>
+								<button id="yes-button" class="alert-button"><p class="alert-text">Yes</p></button>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<hr>
 				{{/each}}

@@ -29,13 +29,13 @@ h3 {
 .ma-diary img {
 	object-fit: cover;
 	position: relative;
-	width: 120px;
-	height: 120px;
+	width: 130px;
+	height: 80px;
 }
 
 #date h4{
 	position: absolute; 
-	margin-left: 115px;
+	margin-left: 130px;
 	margin-top: -14px;
 	padding: 10px; 
 	font-weight: 100;
@@ -46,7 +46,7 @@ h3 {
 
 #location h4{
 	position: absolute; 
-	margin-left: 115px;
+	margin-left: 130px;
 	margin-top: 10px;
 	padding: 10px; 
 	font-weight: 100;
@@ -74,3 +74,60 @@ hr {
 	margin-bottom: 20px;
 	margin-right: 10px;
  }
+
+ img {
+	 max-width: 140px;
+	 max-height: 100px;
+ }
+
+
+ /* delete-alert */
+ #overlay-alert {
+	display: none; 
+	position: fixed;
+	z-index: 1; 
+	width: 400px;
+	overflow: auto;
+}
+
+
+.alert-box {
+    width: 343px;
+	height: 100px;
+	z-index: 1;
+	background: #DEB5C8;
+	border-radius: 10px;
+}
+
+#title {
+    text-align: center;
+	color: black;
+	margin-top: 5px;
+}
+
+.alert-button {
+	background-color: #995762;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+
+#cancel-button {
+	margin-left: 30px;
+    margin-top: 10px;
+}
+
+#yes-button {
+	margin-left: 60px;
+    margin-top: 10px;
+}
+
+
+.alert-text {
+	text-align: center;
+	color: white;
+}

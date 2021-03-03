@@ -21,22 +21,52 @@ function initializePage() {
 	$("#voicerecorder .voiceRecorderBtn").click(checkRecorderClick);
 	$("#check1").click(addVoice);
 
-	$(".delete-icon").click(deleteDiary);
+	$(".delete-icon").click(openAlert);
 	$(".download-icon").click(downloadDiary);
+
+
 
 }
 
+/*manage page delete icons  - delete diary*/
 
-/*delete diary*/
+function openAlert(){
+	document.getElementById("overlay-alert").style.display = "block";
+	$("#cancel-button").click(off);
+	$("#yes-button").click(deleteDiary);
+
+}
+
+function off() {
+	document.getElementById("overlay-alert").style.display = "none";
+}
+
 function deleteDiary(){
-
+	document.getElementById("overlay-alert").style.display = "none";
 	var diaryID = $(this).closest(".each-diary").attr("id");
 	console.log("id is " + diaryID);
+	console.log(this);
 	// var diaryToD = document.getElementById("diaryID");
 	// console.log("delete" + diaryToD);
 	$("#" + diaryID).remove();
+	console.log("now id is" + diaryID);
 
 }
+
+
+/*click download button - download diary */
+
+function downloadDiary(){
+	
+	var diaryID = $(this).closest(".each-diary").attr("id");
+	console.log("id is " + diaryID);
+
+	$("div #" + diaryID).append("<img src='/images/downloading.gif'>")
+}
+
+
+
+
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -59,6 +89,9 @@ function closeFilter() {
 	document.getElementById("myFilter").style.width = "0px";
 }
 
+
+
+
 /* check for webcam */ 
 function checkClick(){
 
@@ -77,7 +110,7 @@ function checkClick(){
 	}
 }
 
-/* click to open filter sections(finish recording)*/
+/* webcam - click to open filter sections(finish recording)*/
 
 function finishRecord(){
 	document.getElementById("overlay").style.display = "block";
@@ -88,14 +121,25 @@ function finishRecord(){
 function addFilter(){
 	document.getElementById("check").style.opacity = "1";
 	$("a#upload").attr('href', '/add');
-	
+
+	var filterID = $(this).closest("div").attr("id");
+	document.getElementById(filterID).style.background = "#BB889F";
+	if(filterID == "box1"){
+		document.getElementById("box2").style.background = "gray";
+		document.getElementById("box3").style.background = "gray";
+	}
+	if(filterID == "box2"){
+		document.getElementById("box1").style.background = "gray";
+		document.getElementById("box3").style.background = "gray";
+	}
+	if(filterID == "box3"){
+		document.getElementById("box1").style.background = "gray";
+		document.getElementById("box2").style.background = "gray";
+	}
 }
 
 
 
-function off() {
-	document.getElementById("overlay").style.display = "none";
-}
 
 
 /* voice recorder */
@@ -124,13 +168,8 @@ function addVoice(){
 	$("a#uploadVoice").attr('href', '/addvoice');
 }
 
-function downloadDiary(){
-	
-	var diaryID = $(this).closest(".each-diary").attr("id");
-	console.log("id is " + diaryID);
 
-	$("div #" + diaryID).append("<img src='/images/downloading.png'>")
-}
+
 
 
 /* Login */
