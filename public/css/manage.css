@@ -65,12 +65,12 @@ hr {
     border-width: 0px;
   }
 
-#ma-icons { 
+.ma-icons { 
 	display:inline-block;
 	
 }
 
-#ma-icons img {
+.ma-icons img {
 	margin-bottom: 20px;
 	margin-right: 10px;
  }

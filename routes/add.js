@@ -42,3 +42,27 @@ exports.addComment = function(req, res){
     // res.render();
     return;
 };
+
+exports.filter = function(req,res){
+    // console.log("data: "+n.type);
+    var newData = JSON.parse(JSON.stringify(data));
+    var id = req.params.id;
+    console.log("q: "+ req.params.id);
+    newData.diaries = data.diaries.filter(function (e){
+        console.log("type: "+e.type);
+        if(id == 'video'){
+            return e.type ==='video';
+        }else{
+            return e.type ==='audio';
+        }
+        
+    });
+    newData.whitespace = "Filtered! Check the result below!"
+    console.log("data: "+ newData.whitespace);
+    res.render('index', newData);
+
+    // res.render('index', data);
+
+}
+
+

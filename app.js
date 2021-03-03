@@ -24,6 +24,7 @@ var addVoice = require('./routes/addVoice');
 var about = require('./routes/about');
 var help = require('./routes/help');
 var contact = require('./routes/contact');
+var edit = require('./routes/edit');
 // var addComment = require('./routes/addComment');
 // Example route
 // var user = require('./routes/user');
@@ -67,6 +68,9 @@ app.get('/addVoice', addVoice.addDiary);
 app.get('/about', about.view);
 app.get('/help', help.view);
 app.get('/contact', contact.view);
+app.get('/filterDiary/:id', add.filter);
+app.get('/edit', edit.view);
+
 
 
 // Example route

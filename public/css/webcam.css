@@ -57,7 +57,7 @@ button {
 .box {
 	width: 110px;
 	height: 100px;
-	background: black;
+	background: gray;
 	text-align: center;
     display: inline-block;
   }

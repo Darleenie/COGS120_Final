@@ -6,7 +6,7 @@
 	{{!-- Add script --}}
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
-	{{!-- <script src="js/hci-friends.js"></script> --}}
+	<script src="js/eventHandler.js"></script>
 
 	{{!-- Add link --}}
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -32,6 +32,7 @@
 		<div class="container">
 			<div class="ma-diary-page">
 				{{#each diaries}}
+				<div class="each-diary" id="{{id}}">
 					<button class="ma-diary">
 						<div id="date">
 							<h4 style="#797979;">{{date}}</h4>
@@ -41,11 +42,12 @@
 						</div>
 						<img src="{{imageURL}}" alt="Lorem Pixel image" class="img-responsive">
 					</button>
-					<div id="ma-icons" style="display:inline-block; margin-right:0%">
-					<img id="edit-icon" src="/images/edit.png">
-					<img id="download-icon" src="/images/download.png">
-					<img id="delete-icon" src="/images/delete.png">
+					<div class="ma-icons" style="display:inline-block; margin-right:0%">
+					<a href="/edit"><img class="edit-icon" src="/images/edit.png"></a>
+					<img class="download-icon" src="/images/download.png">
+					<img class="delete-icon" src="/images/delete.png">
 					</div>
+				</div>
 				<hr>
 				{{/each}}
 			</div>

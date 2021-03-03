@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Edit</title>
+	<meta charset="utf-8">
+	
+	{{!-- Add script --}}
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/eventHandler.js"></script>
+
+	{{!-- Add link --}}
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/edit.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+        {{!-- menu icon --}}
+			    <div class="block" id="menu-icon">
+				    <a href="/manage"><i class="fa fa-chevron-left" style="font-size: 20px; color: #995762; text-align:left"></i></a>
+			    </div>
+
+        {{!-- title --}}
+			<div>
+				<h3>Manage - Edit</h3>
+			</div>
+
+
+        {{!-- diary --}}
+            <div class="container">
+                <div class="edit-diary">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/19_June-1_%2850384477361%29.jpg" alt="Lorem Pixel image" class="img-responsive">
+                
+                <a href="#"><button class="edit" id="edit-thumbnail"><h3 class="text">edit thumbnail</h3></button></a>
+                </div>
+                
+
+                <div>
+                    <a href="#"><button id="date"><p class="info">Feb 10, 2021</p></button></a>
+                    <a href="#"><button class="edit" id="edit-date"><h3 class="text">edit date</h3></button></a>
+                    
+                    <a href="#"><button id="location"><p class="info">Shanghai, China</p></button></a>
+                    <a href="#"><button class="edit" id="edit-location"><h3 class="text">edit location</h3></button></a>
+                </div>
+            </div>
+
+            <hr>
+
+
+            {{!-- tags --}}
+            <div>
+
+            </div>
+
+
+</body>
+</html>

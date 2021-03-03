@@ -1,7 +1,9 @@
 'use strict';
+var data;
 
 // Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
+$(document).ready(function () {
+	//data = require("../data.json");
 	initializePage();
 })
 
@@ -18,6 +20,22 @@ function initializePage() {
 	$(".box").click(addFilter);
 	$("#voicerecorder .voiceRecorderBtn").click(checkRecorderClick);
 	$("#check1").click(addVoice);
+
+	$(".delete-icon").click(deleteDiary);
+	$(".download-icon").click(downloadDiary);
+
+}
+
+
+/*delete diary*/
+function deleteDiary(){
+
+	var diaryID = $(this).closest(".each-diary").attr("id");
+	console.log("id is " + diaryID);
+	// var diaryToD = document.getElementById("diaryID");
+	// console.log("delete" + diaryToD);
+	$("#" + diaryID).remove();
+
 }
 
 /* Set the width of the side navigation to 250px */
@@ -105,6 +123,15 @@ function addVoice(){
 	document.getElementById("check1").style.opacity = "1";
 	$("a#uploadVoice").attr('href', '/addvoice');
 }
+
+function downloadDiary(){
+	
+	var diaryID = $(this).closest(".each-diary").attr("id");
+	console.log("id is " + diaryID);
+
+	$("div #" + diaryID).append("<img src='/images/downloading.png'>")
+}
+
 
 /* Login */
 
