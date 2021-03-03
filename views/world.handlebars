@@ -1,29 +1,40 @@
 <html>
-    <head>
-        <title>Compass voice recording</title>
-        <meta charset="utf-8">
-        
-        {{!-- Add script --}}
-        <script src="js/bootstrap.js"></script>
-        <script src="js/jquery-1.11.0.js"></script>
-        <script src="js/eventHandler.js"></script>
 
-        {{!-- Add link --}}
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-theme.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Compass voice recording</title>
+    <meta charset="utf-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    {{!-- Add script --}}
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/eventHandler.js"></script>
 
-    <body>
-        <div style="text-align: center">
-            
-            <p> world mode page</p>
+    {{!-- Add link --}}
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/world.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <a href="/index"><p> return to home<p></a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        </div>
-    </body>
+<body>
+    <div style="text-align: center">
+
+        {{!-- <p> world mode page</p>
+
+        <a href="/index">
+            <p> return to home<p>
+        </a> --}}
+        <div id="map"></div>
+        {{!-- AIzaSyDOcLKvRzA2Q8uLqCiQg3MbxrONN54duHs --}}
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8se8vgPxg675Ez2KFs7y7Ed9NDBIt8vc&callback=initMap&libraries=&v=weekly" 
+            async
+        ></script>
+    </div>
+</body>
+
 </html>

@@ -8,6 +8,7 @@ exports.addDiary = function(request, response) {
     var currentDate = months[d.getMonth()] + ' ' + d.getDate() + ', ' + '2021'
 
     var newDiary = {
+            "type": "video",
             "id": 7,
             "date": currentDate,
             "description": "Has awesome pet mice",
@@ -20,8 +21,6 @@ exports.addDiary = function(request, response) {
 }
 
 exports.addComment = function(req, res){
-    // console.log(comments);
-
     var d = new Date(),
     minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
     hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
@@ -66,3 +65,10 @@ exports.filter = function(req,res){
 }
 
 
+exports.deleteV = function(req,res){
+    
+    var deleteID = req.query.id;
+    delete data.diaries[deleteID - 1];
+    res.render("manage", data);
+
+}

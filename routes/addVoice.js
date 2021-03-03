@@ -7,6 +7,7 @@ exports.addDiary = function(request, response) {
     var currentDate = months[d.getMonth()] + ' ' + d.getDate() + ', ' + '2021'
 
     var newDiary = {
+            "type": "audio",
             "id": 8,
             "date": currentDate,
             "description": "Has awesome pet mice",
