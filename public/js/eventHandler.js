@@ -240,80 +240,80 @@ function successFun(data, status) {
 }
 
 /* World Track */
-let map;
+var map;
 
-// function initMap() {
-// 	map = new google.maps.Map(document.getElementById("map"), {
-// 		center: new google.maps.LatLng(33.359371, -117.549959),
-// 		zoom: 7
-// 	});
-// 	const iconBase = "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
-// 	var icons = {
-// 		// parking: {
-// 		// 	icon: "/images/map_pin/bts.png",
-// 		// },
-// 		// library: {
-// 		//   icon: "/images/map_pin/mamamoo.png",
-// 		// },
-// 		// info: {
-// 		// 	icon: iconBase + "info-i_maps.png",
-// 		// },
-// 		centerhall: {
-// 			icon: "/images/map_pin/centerhall.png"
-// 		},
-// 		bts: {
-// 			icon: "/images/map_pin/feb10.jpg"
-// 		},
-// 		mamamoo: {
-// 			icon: "/images/map_pin/mamamoo.png"
-// 		},
-// 		feb10: {
-// 			icon: "/images/map_pin/feb10.png"
-// 		},
-// 		navy: {
-// 			icon: "/images/map_pin/navy.png"
-// 		},
-// 		linefriends: {
-// 			icon: "/images/map_pin/linefriends.png"
-// 		}
-// 	};
+function initMap() {
+	map = new google.maps.Map(document.getElementById("map"), {
+		center: new google.maps.LatLng(33.359371, -117.549959),
+		zoom: 7
+	});
+	const iconBase = "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+	var icons = {
+		// parking: {
+		// 	icon: "/images/map_pin/bts.png",
+		// },
+		// library: {
+		//   icon: "/images/map_pin/mamamoo.png",
+		// },
+		// info: {
+		// 	icon: iconBase + "info-i_maps.png",
+		// },
+		centerhall: {
+			icon: "/images/map_pin/centerhall.png",
+		},
+		bts: {
+			icon: "/images/map_pin/feb10.jpg",
+		},
+		mamamoo: {
+			icon: "/images/map_pin/mamamoo.png",
+		},
+		feb10: {
+			icon: "/images/map_pin/feb10.png",
+		},
+		navy: {
+			icon: "/images/map_pin/navy.png",
+		},
+		linefriends: {
+			icon: "/images/map_pin/linefriends.png",
+		}
+	};
 
-// 	const features = [
-// 		{
-// 			position: new google.maps.LatLng(32.878045, -117.237230),
-// 			type: "centerhall"
-// 		},
-// 		{
-// 			position: new google.maps.LatLng(33.684662, -117.818688),
-// 			type: "bts"
-// 		},
-// 		{
-// 			position: new google.maps.LatLng(34.026790, -118.394714),
-// 			type: "mamamoo"
-// 		},
-// 		{
-// 			position: new google.maps.LatLng(32.910866, -117.058875),
-// 			type: "feb10"
-// 		},
-// 		{
-// 			position: new google.maps.LatLng(32.672369, -117.161400),
-// 			type: "navy"
-// 		},
-// 		{
-// 			position: new google.maps.LatLng(34.101301, -118.331541),
-// 			type: "linefriends"
-// 		}
+	const features = [
+		{
+			position: new google.maps.LatLng(32.878045, -117.237230),
+			type: "centerhall",
+		},
+		{
+			position: new google.maps.LatLng(33.684662, -117.818688),
+			type: "bts",
+		},
+		{
+			position: new google.maps.LatLng(34.026790, -118.394714),
+			type: "mamamoo",
+		},
+		{
+			position: new google.maps.LatLng(32.910866, -117.058875),
+			type: "feb10",
+		},
+		{
+			position: new google.maps.LatLng(32.672369, -117.161400),
+			type: "navy",
+		},
+		{
+			position: new google.maps.LatLng(34.101301, -118.331541),
+			type: "linefriends",
+		}
 		
-// 	];
+	];
 
-// 	// Create markers.
-// 	for (let i = 0; i < features.length; i++) {
-// 		const marker = new google.maps.Marker({
-// 			position: features[i].position,
-// 			icon: icons[features[i].type].icon,
-// 			map: map
-// 		});
-// 	}
-// }
+	// Create markers.
+	for (let i = 0; i < features.length; i++) {
+		const marker = new google.maps.Marker({
+			position: features[i].position,
+			icon: icons[features[i].type].icon,
+			map: map,
+		});
+	}
+}
 
 /* End World Track */
