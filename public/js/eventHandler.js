@@ -1,9 +1,9 @@
-// 'use strict';
+'use strict';
 var data;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function () {
-	data = require("../data.json");
+	// data = require("../data.json");
 	initializePage();
 })
 
