@@ -271,7 +271,7 @@ function initMap() {
 			icon: "/images/map_pin/centerhall.png",
 		},
 		bts: {
-			icon: "/images/map_pin/feb10.jpg",
+			icon: "/images/map_pin/bts.png",
 		},
 		mamamoo: {
 			icon: "/images/map_pin/mamamoo.png",

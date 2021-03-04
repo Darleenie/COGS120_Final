@@ -49,7 +49,7 @@
 		</a> 
 	</div>
 
-	<script>
+	{{!-- <script>
 		$(function() {
 			$( "#slider-range" ).slider({
 			range: true,
@@ -63,7 +63,7 @@
 			//$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
 			//" - $" + $( "#slider-range" ).slider( "values", 1 ) );
 		});
-  </script>
+  </script> --}}
 
 
 	{{!-- filter overlay code --}}
@@ -92,8 +92,8 @@
 				<b1>Time Frame</b1>
 			</div>
 			<div class="block">
-				<div id="slider-range"></div>
-				{{!-- <input type="range" min="1" max="100" value="50"> --}}
+				{{!-- <div id="slider-range"></div> --}}
+				<input type="range" min="1" max="100" value="50">
 			</div>
 		</div>
 	</div>
@@ -121,7 +121,7 @@
 
 		{{!-- manage icon --}}
 		<div class="block" id="manage-icon">
-			<a href="manage"><i class="fa fa-edit" style="font-size: 20px; color: #995762;"></i></a>
+			<a href="/manage"><i class="fa fa-edit" style="font-size: 20px; color: #995762;"></i></a>
 		</div>
 
 	</div>
