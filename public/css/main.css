@@ -152,6 +152,10 @@ b2 {
 	z-index: 2;
 }
 
+.navblock{
+	margin: 0 20px;
+}
+
 #menu-icon {
 	top: 10px;
 	left:15px; 
