@@ -17,15 +17,21 @@ function initializePage() {
     //Listen to send button
     $(".send").on("click", function () {
         //Create barrage
-        var jqueryDom = createScreenbullet($("#screenBulletText").val());
+        var val = $("#screenBulletText").val();
+        var jqueryDom = createScreenbullet(val);
         //Add scheduled task
         addInterval(jqueryDom);
         // var info = $(".comment-section").text();
         // console.log("here" + info);
         // $(".comment-section").html("{{#each comments}}<div><b2>{{date}}</b2><br><div><b1>{{description}}</b1></div></div><hr>{{/each}}");
         // $("#comment-section").load("content"+" #comment-section")
-        console.log("here "+$("#comment-title").text()+" done")
-        $("#comment-title").html("COMMENTS <b1>(refresh for new comment)<b1>")
+        var d = new Date(),
+        minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+        hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+        ampm = d.getHours() >= 12 ? 'pm' : 'am',
+        months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var time = hours+':'+minutes+ampm+", "+months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+        $("#new-comment").html("<div style='margin-left:10%'><b2>"+time+"</b2><br><div><b1>"+val+"</b1></div></div><hr>");
     //Monitor close button
     // $(".clear").on("click", function () {
     //     if (isShow) {
