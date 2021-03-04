@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Video editing</title>
+    <meta charset="utf-8">
+
+    {{!-- Add script --}}
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/eventHandler.js"></script>
+
+    {{!-- Add link --}}
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/videoEditing.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    {{!-- video --}}
+    <div>
+        <img id="video-img-editing" class="video img-responsive" src="http://lorempixel.com/400/400/people" 
+        alt="Lorem Pixel image" >
+    </div>
+
+   
+
+    {{!-- filter section --}}
+        <div id="Overlay" >
+            <div id="content"></div>
+                <div class="wrapper">
+                    <div id="box1" class="box">None</div>
+                    <div id="box2" class="box">Filter A</div>
+                    <div id="box3" class="box">Filter B</div>
+                </div>
+            </div>
+        </div>
+
+
+    {{!-- start button --}}
+    <div class="lower-icon">
+        <a href="/webcam"><i class="fa fa-chevron-left fa-3x block" style="color:white; margin-right:20%"></i></a>
+        <button id="webcam-play-button" class="record-img block"><img id="record1" src="/images/play.png" alt="play"></button>
+
+        <a href="/add" id="upload"><i class="fa fa-check fa-3x block" id="check" style="color:white; margin-left:16%; opacity:0"></i></a>
+    </div>
+</body>
+
+</html>

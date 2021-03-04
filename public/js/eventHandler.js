@@ -15,8 +15,10 @@ function initializePage() {
 	// $('#colorBtn').click(randomizeColors);
 	var count = 0;
 	$("#webcam-record-button img").click(checkClick);
-	$("#upload #check").click(finishRecord);
+
+	// $("#upload #check").click(finishRecord);
 	$(".box").click(addFilter);
+
 	$("#voicerecorder .voiceRecorderBtn").click(checkRecorderClick);
 	$("#check1").click(addVoice);
 
@@ -148,29 +150,36 @@ function checkClick(){
 
 /* webcam - click to open filter sections(finish recording)*/
 
-function finishRecord() {
-	document.getElementById("overlay").style.display = "block";
-	$("#webcam-record-button img").attr("src", "/images/play.png");
-	document.getElementById("check").style.opacity = "0"
-}
+// function finishRecord() {
+// 	document.getElementById("overlay").style.display = "block";
+// 	$("#webcam-record-button img").attr("src", "/images/play.png");
+// 	document.getElementById("check").style.opacity = "0"
+// }
 
 function addFilter() {
 	document.getElementById("check").style.opacity = "1";
-	$("a#upload").attr('href', '/add');
+	// $("a#upload").attr('href', '/add');
 
 	var filterID = $(this).closest("div").attr("id");
 	document.getElementById(filterID).style.background = "#BB889F";
 	if(filterID == "box1"){
 		document.getElementById("box2").style.background = "gray";
 		document.getElementById("box3").style.background = "gray";
+		$("#video-img-editing").css({"filter": "none"
+		});
 	}
 	if(filterID == "box2"){
 		document.getElementById("box1").style.background = "gray";
 		document.getElementById("box3").style.background = "gray";
+		$("#video-img-editing").css({"filter": "contrast(150%)"
+		});
+
 	}
 	if(filterID == "box3"){
 		document.getElementById("box1").style.background = "gray";
 		document.getElementById("box2").style.background = "gray";
+		$("#video-img-editing").css({"filter": "saturate(2)"
+		});
 	}
 }
 
@@ -205,7 +214,7 @@ function addVoice() {
 }
 
 
-	$("div #" + diaryID).append("<img src='/images/downloading.png'>")
+	// $("div #" + diaryID).append("<img src='/images/downloading.png'>")
 
 
 // function deleteVideo() {

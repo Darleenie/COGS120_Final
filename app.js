@@ -25,6 +25,7 @@ var about = require('./routes/about');
 var help = require('./routes/help');
 var contact = require('./routes/contact');
 var edit = require('./routes/edit');
+var videoEditing = require('./routes/videoEditing');
 // var deleteV = require('./routes/deleteV');
 // var addComment = require('./routes/addComment');
 // Example route
@@ -71,7 +72,8 @@ app.get('/help', help.view);
 app.get('/contact', contact.view);
 app.get('/filterDiary/:id', add.filter);
 app.get('/edit', edit.view);
-app.get('/deleteV', add.deleteV);
+// app.get('/deleteV', add.deleteV);
+app.get('/videoEditing', videoEditing.view);
 
 
 // Example route

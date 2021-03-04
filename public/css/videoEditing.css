@@ -2,19 +2,23 @@ body{
     background-color: black;
 }
 
-#videoElement {
-	max-width: 352px;
+
+
+
+.video {
+    max-width: 352px;
 	height: 519px;
-	object-fit: cover;
-	background-image: url('../images/camera-bg.jpg');
+	
 	position: absolute;
-	/* margin: auto; */
-	/* text-align: center; */
+	
 	margin-left: 3.2%;
 	margin-right: 3.2%;
 	margin-top: 5.7%;
 	margin-bottom: 16.49%;
+
+
 }
+
 
 .round-button {
 	width: 60px;
@@ -43,7 +47,6 @@ button {
 
 
 #overlay {
-	display: none; /* Hidden by default */
 	position: fixed;
 	top: 440px; /*Stay in place*/
 	left: 12px;
@@ -54,26 +57,24 @@ button {
 	background-color: white; 
 }
 
-/* .box {
+.box {
 	width: 110px;
 	height: 100px;
 	background: gray;
 	text-align: center;
     display: inline-block;
   }
-   */
-
-   
-  /* div.box{
+  
+  div.box{
 	  color: white;
 
   }
- */
 
   
- /* .wrapper {
+ .wrapper {
   overflow: hidden;
-
+  /*make sure the wrapper has no dimension*/
   text-align: center;
-} */
+}
+
 
