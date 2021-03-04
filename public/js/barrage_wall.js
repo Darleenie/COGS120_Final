@@ -24,7 +24,8 @@ function initializePage() {
         // console.log("here" + info);
         // $(".comment-section").html("{{#each comments}}<div><b2>{{date}}</b2><br><div><b1>{{description}}</b1></div></div><hr>{{/each}}");
         // $("#comment-section").load("content"+" #comment-section")
-        $("h4").html("COMMENTS (refresh for new comments)")
+        console.log("here "+$("#comment-title").text()+" done")
+        $("#comment-title").html("COMMENTS <b1>(refresh for new comment)<b1>")
     //Monitor close button
     // $(".clear").on("click", function () {
     //     if (isShow) {
