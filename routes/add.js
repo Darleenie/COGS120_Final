@@ -1,5 +1,6 @@
 var data = require("../data.json");
 var comments = require('../comments.json');
+var tags = require('../tags.json');
 
 exports.addDiary = function(request, response) {   
 	
@@ -65,10 +66,14 @@ exports.filter = function(req,res){
 }
 
 
-exports.deleteV = function(req,res){
+exports.addTag = function(req,res){
     
-    var deleteID = req.query.id;
-    delete data.diaries[deleteID - 1];
-    res.render("manage", data);
+    var tagToAdd = req.query.tag;
+    var newtag = {
+        "name": tagToAdd
+    };
+    
+    tags.tags.push(newtag);
+    res.render("edit", tags);
 
 }

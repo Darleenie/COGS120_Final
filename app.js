@@ -64,7 +64,7 @@ app.get('/manage', manage.view);
 app.get('/webcam', webcam.view);
 app.get('/voice', voice.view);
 app.get('/content/:id', content.viewPrev);
-app.get('/add', add.addDiary);
+app.get('/addDiary', add.addDiary);
 app.get('/addComment', add.addComment);
 app.get('/addVoice', addVoice.addDiary);
 app.get('/about', about.view);
@@ -74,6 +74,7 @@ app.get('/filterDiary/:id', add.filter);
 app.get('/edit', edit.view);
 // app.get('/deleteV', add.deleteV);
 app.get('/videoEditing', videoEditing.view);
+app.get('/addtag', add.addTag);
 
 
 // Example route

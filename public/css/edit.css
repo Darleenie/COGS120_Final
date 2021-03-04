@@ -99,8 +99,26 @@ button.edit {
 
 #edit-tags {
     margin-left: 235px;
-    margin-top: 10px;
+    margin-top: -50px;
 
 }
 
 
+
+input[type=text]{
+    width: 220px;
+    padding: 12px 20px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #8E7B4B;
+    box-sizing: border-box;
+    border-radius: 20px; 
+    margin-left: 0px;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: SF Pro Display;
+    font-size: 15px; 
+    font-weight: 300;
+    line-height: 22px; 
+  }

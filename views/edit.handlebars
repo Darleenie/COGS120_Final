@@ -47,8 +47,6 @@
                 </div>
 
                 <hr>
-                
-
             </div>
 
 
@@ -61,7 +59,10 @@
                      </div>
                     {{/each}}
 
-                    <a href="#"><button class="edit" id="edit-tags"><h3 class="text">Edit tags</h3></button></a>
+                    <form role="form" method="get" action="/addTag">
+                    <input type="text" placeholder="Enter tag name" name="tag" required>            
+                    <button type="submit" class="edit" id="edit-tags"><h3 class="text">Add tag</h3></button>
+                    </form>
             </div>  
            
             
