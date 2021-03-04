@@ -3,6 +3,7 @@ function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
+    location.replace('/index');
   }
   
   function statusChangeCallback(response) {

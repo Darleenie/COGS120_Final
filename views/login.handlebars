@@ -63,8 +63,9 @@
             <div class="horizontal-container">
                 {{!-- other sources login --}}
                 {{!-- <input class="block" type="image" height=60 width=auto src="/images/fblogin.png"> --}}
-                <fb:login-button class="block" scope="public_profile,email" onlogin="checkLoginState();"><img src="/images/fblogin.png" height=60 width=auto></fb:login-button>
-                <input class="block" type="image" height=60 width=auto src="/images/googlelogin.png">
+                <fb:login-button class="block" scope="public_profile,email" onlogin="checkLoginState()">
+                </fb:login-button>
+                {{!-- <input class="block" type="image" height=60 width=auto src="/images/googlelogin.png"> --}}
             </div>
         </div>
 
