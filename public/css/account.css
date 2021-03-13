@@ -20,3 +20,59 @@ profile-card {
     width: 45%;
     border-radius: 45px;
   }
+  
+  #profilepic {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+
+  #overlay-alert {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    width: 400px;
+    overflow: auto;
+  }
+  
+  
+  .alert-box {
+      width: 375px;
+    height: 100px;
+    z-index: 1;
+    background: #DEB5C8;
+    border-radius: 10px;
+  }
+  
+  #title {
+      text-align: center;
+    color: black;
+    margin-top: 5px;
+  }
+  
+  .alert-button {
+    background-color: #995762;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+      height: 30px;
+      border-radius: 5px;
+      
+  }
+  
+  #cancel-button {
+    margin-left: 50px;
+      margin-top: 10px;
+  }
+  
+  #yes-button {
+    margin-left: 60px;
+      margin-top: 10px;
+  }
+  
+  
+  .alert-text {
+    text-align: center;
+    color: white;
+  }

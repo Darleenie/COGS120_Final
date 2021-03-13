@@ -1,9 +1,11 @@
+var person = {name: "", picture: ""}
+
 //869168413863969
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
-    location.replace('/index');
+    //location.replace('/index');
   }
   
   function statusChangeCallback(response) {
@@ -17,13 +19,17 @@ function checkLoginState() {
             // Logged into your app and Facebook.
             console.log('Successfully logged in with Facebook');
             FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+            window.location.href = "/index";
     }
   }
 
   function changeUser(response) {
       console.log(response);
 
-      $('.facebookLogin').hide();
-      $('#name').text(response.name);
-      $('#photo').attr('src', response.picture.data.url)
+      person.name = response.name;
+      person.picture = response.picture.data.url;
+
+      // $('.facebookLogin').hide();
+      // $('#username').text(response.name);
+      // $('#profilepic').attr('src', response.picture.data.url)
   }

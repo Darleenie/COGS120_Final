@@ -22,19 +22,37 @@ function initializePage() {
 	$("#voicerecorder .voiceRecorderBtn").click(checkRecorderClick);
 	$("#check1").click(addVoice);
 
-	$(".delete-icon").click(openAlert);
+	$(".delete-icon").click(opendeleteAlert);
 	$(".download-icon").click(downloadDiary);
 
+
+	$("#logout").click(openlogoutAlert);
 
 
 }
 
+function  openlogoutAlert(){
+	document.getElementById("overlay-alert").style.display = "block";
+	$("#cancel-button").click(off);
+	$("#yes-button").click(logout);
+
+}
+
+function logout(){
+	window.location.href = "/"
+
+}
+
+
+
+
 /*manage page delete icons  - delete diary*/
 
-function openAlert(){
+function opendeleteAlert(){
 	document.getElementById("overlay-alert").style.display = "block";
 	$("#cancel-button").click(off);
 	$("#yes-button").click(deleteDiary);
+	
 
 }
 
@@ -57,12 +75,17 @@ function deleteDiary(){
 
 /*click download button - download diary */
 
+
 function downloadDiary(){
+
 	
 	var diaryID = $(this).closest(".each-diary").attr("id");
 	console.log("id is " + diaryID);
-
 	$("div #" + diaryID).append("<img src='/images/downloading.gif'>")
+
+	$("div #" + diaryID + " .download-icon").attr("src", "");
+	//document.getElementsByClassName("div #" + diaryID + " .download-icon").attr
+	
 }
 
 

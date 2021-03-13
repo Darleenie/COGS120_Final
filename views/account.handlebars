@@ -7,6 +7,8 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/jquery-1.11.0.js"></script>
         <script src="js/eventHandler.js"></script>
+        {{> facebook}}
+	    <script src="js/facebook.js"></script>
 
         {{!-- Add link --}}
         <link href="css/bootstrap.css" rel="stylesheet">
@@ -29,16 +31,26 @@
         {{!-- profile info --}}
 
         <div class="imgcontainer">
-            <img src="/images/pic.png" style="width:130; height:auto" alt="profile-pic">
+            <img id="profilepic" src="/images/pic.png" style="width:130; height:auto" alt="profile-pic">
         </div>
 
         <div class="profile-card"> 
-            <h1 id="username" style="text-align:center" >Username</h1>
+            {{!-- <h1 id="username" style="text-align:center" >Username</h1> --}}
 
-            <h3 style="text-align:center">Email: username@iamhappy.com</h3>
+            <h3 style="text-align:center">Email: compass@iamhappy.com</h3>
             <h3 style="text-align:center" >Password: *********</h3>
 
-            <a href="/"><button id="logout">
+            <div id="overlay-alert">
+						<div class="alert-box">
+							<div id="content">
+								<div><h3 id="title">Are you sure to log out?</h3></div>
+								<button id="cancel-button" class="alert-button"><p class="alert-text">Cancel</p></button>
+								<button id="yes-button" class="alert-button"><p class="alert-text">Yes</p></button>
+							</div>
+						</div>
+			</div>
+
+            <a><button id="logout">
                 <h2 style="font-size: 20px; color: white; line-height: 0; margin-bottom: 16px;">LOGOUT</h2>
             </button></a>
         
