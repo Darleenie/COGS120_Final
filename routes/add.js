@@ -12,8 +12,9 @@ exports.addDiary = function(request, response) {
             "type": "video",
             "id": 7,
             "date": currentDate,
+            "location": "La Jolla, CA, USA",
             "description": "Has awesome pet mice",
-            "imageURL": "http://lorempixel.com/400/400/people",
+            "imageURL": "/images/smallgood.png",
         }
 
         data.diaries.unshift(newDiary);
